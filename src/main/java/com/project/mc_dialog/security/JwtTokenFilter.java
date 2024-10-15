@@ -49,7 +49,6 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
         if (request.getRequestURI().equals("/api/v1/streaming/ws")) {
             final Cookie[] cookies = request.getCookies();
-            account_id = "123";
             if (cookies != null) {
                 for (Cookie cookie : cookies) {
                     if (cookie.getName().equals("jwt")) {
